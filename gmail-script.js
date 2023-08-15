@@ -9,7 +9,9 @@ window.onload = function()
                         //do something on click
                         span.addEventListener('click' ,function(){
                             const email = document.querySelector('.adn.ads');
-                            console.log(email.textContent);
+                            (async function() {
+                                chrome.runtime.sendMessage(email.textContent);
+                            })();
                         });
                     }
             }
