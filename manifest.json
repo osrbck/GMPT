@@ -12,6 +12,10 @@
         {
             "matches": ["https://mail.google.com/*"],
             "js":["gmail-script.js"]
+        },
+        {
+            "matches": ["https://chat.openai.com/*"],
+            "js":["gpt-script.js"]
         }
     ],
     
@@ -20,6 +24,7 @@
     },
 
     "host_permissions":[
-        "https://mail.google.com/*"
+        "https://mail.google.com/*",
+        "https://chat.openai.com/*"
     ]
 }
