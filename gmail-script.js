@@ -10,11 +10,14 @@ window.onload = function()
                         span.addEventListener('click' ,function(){
                             const email = document.querySelector('.adn.ads');
                             (async function() {
-                                chrome.runtime.sendMessage(email.textContent);
+                                const gptResponse = await chrome.runtime.sendMessage(email.textContent);
+                                const gmailTextbox = document.querySelector('[role=textbox]');
+                                gmailTextbox.innerText=gptResponse;
                             })();
                         });
                     }
             }
         }
     };
+    return true;
 }
